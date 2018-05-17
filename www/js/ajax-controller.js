@@ -118,11 +118,9 @@ var peticionesAJAX = (function() {
 			url: "http://localhost:8000/api/user/createBooking",
 			async: false
 		}).done(function(ok) {
-			return contenido.home();
+			return app.ini();
 		}).fail(function(error) {
 			contenido.feedBack(JSON.stringify(error));
-		}).always(function() {
-			contenido.home();
 		});
 	};
 
